@@ -1,40 +1,192 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Saya</title>
+    <title>WindUI - Documentation</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Selamat Datang di Website Saya</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Tentang</a></li>
-                <li><a href="#contact">Kontak</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="animated-bg"></div>
+    
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="wind-logo">
+                <span class="wind-letter" style="--i:1">W</span>
+                <span class="wind-letter" style="--i:2">i</span>
+                <span class="wind-letter" style="--i:3">n</span>
+                <span class="wind-letter" style="--i:4">d</span>
+                <span class="wind-letter" style="--i:5">U</span>
+                <span class="wind-letter" style="--i:6">I</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
 
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>Ini adalah halaman utama website saya.</p>
-            <button onclick="showMessage()">Klik Saya</button>
-        </section>
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Header -->
+        <header class="header slide-down">
+            <nav class="navbar">
+                <div class="logo-container">
+                    <span class="logo-icon">🌪️</span>
+                    <span class="logo-text">WindUI</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#" class="nav-link active">Docs</a>
+                    <a href="#" class="nav-link">Examples</a>
+                    <a href="#" class="nav-link">Themes</a>
+                    <a href="#" class="nav-link">GitHub</a>
+                </div>
+                <button class="theme-toggle">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </nav>
+        </header>
 
-        <section id="about">
-            <h2>Tentang</h2>
-            <p>Website ini dibuat dengan HTML, CSS, dan JavaScript.</p>
-        </section>
+        <!-- Main Container -->
+        <div class="container">
+            <!-- Sidebar -->
+            <aside class="sidebar slide-left" id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Documentation</h3>
+                </div>
+                <div class="sidebar-content">
+                    <div class="nav-section">
+                        <div class="section-title">Introduction</div>
+                        <a href="#" class="sidebar-link active">About WindUI</a>
+                        <a href="#" class="sidebar-link">Setup</a>
+                    </div>
 
-        <section id="contact">
-            <h2>Kontak</h2>
-            <form id="contactForm">
-                <input type="text" placeholder="Nama" required>
-                <input type="email" placeholder="Email" required>
+                    <div class="nav-section">
+                        <div class="section-title">Load Methods</div>
+                        <a href="#" class="sidebar-link">Load latest version</a>
+                        <a href="#" class="sidebar-link">Load selected version</a>
+                    </div>
+
+                    <div class="nav-section">
+                        <div class="section-title">UI Components</div>
+                        <a href="#" class="sidebar-link">Window</a>
+                        <a href="#" class="sidebar-link">Key System</a>
+                        <a href="#" class="sidebar-link">Tab</a>
+                        <a href="#" class="sidebar-link">Tab Section</a>
+                        <a href="#" class="sidebar-link">Dialog</a>
+                        <a href="#" class="sidebar-link">Popup</a>
+                        <a href="#" class="sidebar-link">Tag</a>
+                        <a href="#" class="sidebar-link">Notification</a>
+                        <a href="#" class="sidebar-link">Divider</a>
+                    </div>
+
+                    <div class="nav-section">
+                        <div class="section-title">Themes</div>
+                        <a href="#" class="sidebar-link">Theme Configuration</a>
+                        <a href="#" class="sidebar-link">Custom Themes</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="main slide-right">
+                <div class="content-card">
+                    <h1 class="page-title">Introduction to WindUI</h1>
+                    <p class="page-description">A powerful UI library for Roblox with beautiful animations and easy-to-use components.</p>
+
+                    <!-- Load Methods Section -->
+                    <section class="doc-section fade-in">
+                        <h2>Load Methods</h2>
+                        
+                        <div class="method-grid">
+                            <div class="method-card" onclick="copyToClipboard('loadLatest')">
+                                <h3>Load latest version</h3>
+                                <p class="method-desc">Recommended for most users</p>
+                                <div class="code-block" id="loadLatest">
+                                    <code>local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/windui/windui/main/loader.lua"))()</code>
+                                </div>
+                                <span class="copy-hint">Click to copy</span>
+                            </div>
+
+                            <div class="method-card" onclick="copyToClipboard('loadSelected')">
+                                <h3>Load selected version</h3>
+                                <p class="method-desc">Choose specific version</p>
+                                <div class="code-block" id="loadSelected">
+                                    <code>local Version = "1.6.41"<br>local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/windui/windui/v"..Version.."/loader.lua"))()</code>
+                                </div>
+                                <span class="copy-hint">Click to copy</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Quick Setup -->
+                    <section class="doc-section fade-in">
+                        <h2>Quick Setup</h2>
+                        <div class="code-block-full">
+                            <pre><code>-- Initialize WindUI
+local WindUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/windui/windui/main/loader.lua"))()
+
+-- Create a window
+local Window = WindUI:CreateWindow({
+    Title = "My Script",
+    SubTitle = "WindUI Example",
+    Size = UDim2.fromOffset(600, 400),
+    Position = UDim2.fromOffset(200, 100)
+})
+
+-- Create a tab
+local Tab = Window:CreateTab({
+    Name = "Main",
+    Icon = "rbxassetid://1234567890"
+})</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- Components Preview -->
+                    <section class="doc-section fade-in">
+                        <h2>UI Components</h2>
+                        <div class="components-grid">
+                            <div class="component-preview">
+                                <span class="preview-badge">Window</span>
+                                <div class="preview-box window-preview">
+                                    <div class="preview-header"></div>
+                                    <div class="preview-content"></div>
+                                </div>
+                            </div>
+                            <div class="component-preview">
+                                <span class="preview-badge">Tab</span>
+                                <div class="preview-box tab-preview">
+                                    <div class="tab-item active"></div>
+                                    <div class="tab-item"></div>
+                                    <div class="tab-item"></div>
+                                </div>
+                            </div>
+                            <div class="component-preview">
+                                <span class="preview-badge">Dialog</span>
+                                <div class="preview-box dialog-preview">
+                                    <div class="dialog-content"></div>
+                                </div>
+                            </div>
+                            <div class="component-preview">
+                                <span class="preview-badge">Notification</span>
+                                <div class="preview-box notif-preview">
+                                    <div class="notif-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">Copied to clipboard!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>                <input type="email" placeholder="Email" required>
                 <textarea placeholder="Pesan"></textarea>
                 <button type="submit">Kirim</button>
             </form>
