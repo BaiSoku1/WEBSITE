@@ -3,38 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WindUI - Documentation</title>
+    <title>Login | Akun Saya</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="animated-bg"></div>
-    
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loading-content">
-            <div class="wind-logo">
-                <span class="wind-letter" style="--i:1">W</span>
-                <span class="wind-letter" style="--i:2">i</span>
-                <span class="wind-letter" style="--i:3">n</span>
-                <span class="wind-letter" style="--i:4">d</span>
-                <span class="wind-letter" style="--i:5">U</span>
-                <span class="wind-letter" style="--i:6">I</span>
+    <div class="container">
+        <div class="login-card">
+            <div class="header">
+                <h1>Selamat Datang Kembali</h1>
+                <p>Silakan masuk ke akun Anda</p>
             </div>
-            <div class="loading-bar">
-                <div class="loading-progress"></div>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="nama">Nama</label>
+                    <input 
+                        type="text" 
+                        id="nama" 
+                        placeholder="Masukkan nama Anda"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        placeholder="Masukkan password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="login-btn" id="loginBtn">
+                    <span>Login</span>
+                    <div class="circle-spinner"></div>
+                </button>
+            </form>
+
+            <div class="divider">
+                <span>atau</span>
             </div>
+
+            <div class="social-login">
+                <p class="new-here">Pengguna baru?</p>
+                <div class="social-buttons">
+                    <button class="social-btn google">
+                        <i class="fab fa-google"></i>
+                        Google
+                    </button>
+                    <button class="social-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        Facebook
+                    </button>
+                    <button class="social-btn spotify">
+                        <i class="fab fa-spotify"></i>
+                        Spotify
+                    </button>
+                </div>
+            </div>
+
+            <p class="terms">
+                Dengan login, Anda menyetujui 
+                <a href="#">Syarat & Ketentuan</a>
+            </p>
         </div>
     </div>
 
-    <!-- Main Content -->
-    <div class="main-content" id="mainContent">
-        <!-- Header -->
-        <header class="header slide-down">
-            <nav class="navbar">
-                <div class="logo-container">
-                    <span class="logo-icon">🌪️</span>
-                    <span class="logo-text">WindUI</span>
+    <script src="script.js"></script>
+</body>
+</html>                    <span class="logo-text">WindUI</span>
                 </div>
                 <div class="nav-links">
                     <a href="#" class="nav-link active">Docs</a>
