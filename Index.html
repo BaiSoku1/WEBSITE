@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Saya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Website Saya</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Ini adalah halaman utama website saya.</p>
+            <button onclick="showMessage()">Klik Saya</button>
+        </section>
+
+        <section id="about">
+            <h2>Tentang</h2>
+            <p>Website ini dibuat dengan HTML, CSS, dan JavaScript.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Kontak</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Nama" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Pesan"></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Website Saya</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
