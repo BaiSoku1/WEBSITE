@@ -1,40 +1,86 @@
-# WindUI Documentation Website
+# 🔐 MASTEX.net - Your Personal Security Portal
 
-A beautiful and interactive documentation website for WindUI - A powerful UI library for Roblox.
+![Version](https://img.shields.io/badge/version-1.0.0-pink.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![HTML](https://img.shields.io/badge/HTML-5-orange)
+![CSS](https://img.shields.io/badge/CSS-3-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
 
-## ✨ Features
+---
 
-- **Beautiful Animations**: Loading screen, fade effects, slide animations
-- **Interactive Components**: Click to copy code, hover effects
-- **Dark/Light Theme**: Toggle between dark and light mode
-- **Responsive Design**: Works on all devices
-- **Smooth Navigation**: Sidebar with active states
-- **Toast Notifications**: User feedback system
+## 📋 DAFTAR ISI
+- [Tentang Project](#tentang-project)
+- [Fitur Lengkap](#fitur-lengkap)
+- [Preview Halaman](#preview-halaman)
+- [Struktur File](#struktur-file)
+- [Cara Install](#cara-install)
+- [Cara Penggunaan](#cara-penggunaan)
+- [Penjelasan Kode](#penjelasan-kode)
+- [Testing & Validasi](#testing--validasi)
+- [Kustomisasi](#kustomisasi)
+- [Troubleshooting](#troubleshooting)
+- [FAQ](#faq)
+- [Credits](#credits)
+- [Lisensi](#lisensi)
+- [Kontak](#kontak)
 
-## 🚀 Animations Included
+---
 
-1. **Loading Screen**: Animated logo with progress bar
-2. **Page Transitions**: Slide and fade effects
-3. **Hover Effects**: Scale, translate, and glow effects
-4. **Background Animation**: Parallax and pulse effects
-5. **Component Previews**: Interactive UI elements
+## 🎯 TENTANG PROJECT
 
-## 📦 Technologies Used
+### Deskripsi
+**MASTEX.net** adalah halaman login modern yang terinspirasi dari portal keamanan pribadi. Dibuat dengan desain minimalis namun fungsional, halaman ini cocok untuk berbagai kebutuhan:
 
-- HTML5
-- CSS3 (Animations, Flexbox, Grid)
-- JavaScript (ES6+)
-- Google Fonts (Inter)
+- ✅ Website pribadi
+- ✅ Portal member
+- ✅ Dashboard admin
+- ✅ Aplikasi internal
+- ✅ Landing page login
 
-## 🎨 Color Scheme
+### Mengapa MASTEX.net?
+- ✨ **Sederhana** - Desain clean tanpa ribet
+- ✨ **Responsif** - Buka di HP, tablet, atau desktop tetap rapi
+- ✨ **Fungsional** - Validasi real-time, localStorage, keyboard support
+- ✨ **Ringan** - Cuma 3 file, gak perlu framework berat
+- ✨ **Kustomizable** - Gampang diubah sesuai kebutuhan
 
-- Primary: `#6366f1` (Indigo)
-- Secondary: `#10b981` (Emerald)
-- Background: `#0f172a` (Dark Blue)
-- Text: `#f8fafc` (White)
+---
 
-## 🛠️ Installation
+## ✨ FITUR LENGKAP
 
-1. Clone the repository
-```bash
-git clone https://github.com/yourusername/windui-docs.git
+### 🔑 Fitur Login
+| Fitur | Keterangan |
+|-------|------------|
+| Input Username | Dengan validasi minimal 3 karakter |
+| Input Password | Dengan validasi minimal 4 karakter |
+| Remember Me | Simpan username di browser |
+| Forgot Password | Link dengan notifikasi |
+| Login Button | Dengan loading state |
+
+### 🔐 Fitur Keamanan
+- ✅ Validasi input real-time
+- ✅ Sanitasi input (trim whitespace)
+- ✅ Proteksi form submission default
+- ✅ Simulasi biometric dengan random
+- ✅ Guest mode untuk quick access
+
+### ⚡ Fitur Tambahan
+| Fitur | Fungsi |
+|-------|--------|
+| Biometric Login | Simulasi sidik jari (50% success) |
+| Quick Sign In | Auto login sebagai guest |
+| Keyboard Support | Navigasi pakai Enter |
+| Local Storage | Remember me functionality |
+| Real-time Validation | Highlight merah kalau error |
+
+### 📱 Responsive Design
+- ✅ Desktop (1024px+)
+- ✅ Tablet (768px - 1023px)
+- ✅ Mobile ( < 768px)
+- ✅ Semua element menyesuaikan
+
+---
+
+## 🖼️ PREVIEW HALAMAN
+
+### Tampilan Desktop
